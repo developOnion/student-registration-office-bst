@@ -2,6 +2,8 @@
 
 ## How To Run
 
--   run "make" to compile
--   run "make run" to run
--   run "make clean" to clean all .o files
+-   on root directory
+
+*   run "make" to compile
+*   run "make run" to run
+*   run "make clean" to clean all .o files
