@@ -1,6 +1,10 @@
 # Prerequisites
 *.d
 
+# Build directories
+**bin/
+**build/
+
 # Compiled Object files
 *.slo
 *.lo
@@ -32,8 +36,8 @@
 *.app
 
 # IDE and Editor files
-.vscode/
-.idea/
+**.vscode/
+**.idea/
 *.swp
 *.swo
 *~
