@@ -24,7 +24,9 @@ private:
     // helper function
     Node *addStudentRecursive(Node *node, Student newStudent);
     void printAllStudentsInfoRecursive(Node *node); // inorder traversal
+    int countAllStudentsRecursive(Node *node);
 
+    // check if ID exists
     bool isIDExist(Node *node, int id);
 
 public:
@@ -32,13 +34,19 @@ public:
 
     ~StudentManager();
 
+    // add student to BST by generating unique ID
     void addStudent(std::string name, int age);
+
     void deleteStudentById(int id);
+
     Student searchById(int id);
     Student searchByName(std::string name);
+
     void sortStudentsByName();
     void sortStudentsByAge();
     void sortStudentsById();
+
+    // utils
     int countAllStudents();
     void printAllStudentsInfo();
 };

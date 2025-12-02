@@ -11,6 +11,7 @@ int main(void)
     studentManager.addStudent("Reaksmey", 18);
 
     studentManager.printAllStudentsInfo();
+    std::cout << "Total students: " << studentManager.countAllStudents() << "\n";
 
     return 0;
 }

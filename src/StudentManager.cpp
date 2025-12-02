@@ -68,9 +68,17 @@ void StudentManager::sortStudentsById()
 {
 }
 
+int StudentManager::countAllStudentsRecursive(Node *node)
+{
+    if (node == nullptr)
+        return 0;
+
+    return 1 + countAllStudentsRecursive(node->left) + countAllStudentsRecursive(node->right);
+}
+
 int StudentManager::countAllStudents()
 {
-    return 0;
+    return countAllStudentsRecursive(this->root);
 }
 
 void StudentManager::printAllStudentsInfoRecursive(Node *node)
