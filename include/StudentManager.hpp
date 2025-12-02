@@ -21,12 +21,18 @@ private:
 
     Node *root;
 
+    // helper function
+    Node *addStudentRecursive(Node *node, Student newStudent);
+    void printAllStudentsInfoRecursive(Node *node); // inorder traversal
+
+    bool isIDExist(Node *node, int id);
+
 public:
     StudentManager();
 
     ~StudentManager();
 
-    void addStudent(Student newStudent);
+    void addStudent(std::string name, int age);
     void deleteStudentById(int id);
     Student searchById(int id);
     Student searchByName(std::string name);
