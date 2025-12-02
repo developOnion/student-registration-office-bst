@@ -11,7 +11,15 @@ int main(void)
     studentManager.addStudent("Reaksmey", 18);
 
     studentManager.printAllStudentsInfo();
-    std::cout << "Total students: " << studentManager.countAllStudents() << "\n";
+    std::cout << "\nTotal students: " << studentManager.countAllStudents() << "\n";
+
+    int id;
+    std::cout << "\nEnter student ID to delete: ";
+    std::cin >> id;
+    studentManager.deleteStudentById(id);
+
+    studentManager.printAllStudentsInfo();
+    std::cout << "\nTotal students: " << studentManager.countAllStudents() << "\n";
 
     return 0;
 }

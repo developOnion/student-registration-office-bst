@@ -23,6 +23,8 @@ private:
 
     // helper function
     Node *addStudentRecursive(Node *node, Student newStudent);
+    Node *deleteStudentByIdRecursive(Node *node, int id);
+
     void printAllStudentsInfoRecursive(Node *node); // inorder traversal
     int countAllStudentsRecursive(Node *node);
 
@@ -50,6 +52,9 @@ public:
     // utils
     int countAllStudents();
     void printAllStudentsInfo();
+    int height(Node *node);
+    Node *inorderPredecessor(Node *node);
+    Node *inorderSuccessor(Node *node);
 };
 
 #endif
