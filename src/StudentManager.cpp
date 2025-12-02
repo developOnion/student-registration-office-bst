@@ -40,6 +40,9 @@ void StudentManager::addStudent(std::string name, int age)
         this->root = new Node(newStudent);
     else
         this->root = addStudentRecursive(this->root, newStudent);
+
+    std::cout << "\nAdded student: \n";
+    newStudent.toString();
 }
 
 void StudentManager::deleteStudentById(int id)
@@ -93,6 +96,7 @@ void StudentManager::printAllStudentsInfoRecursive(Node *node)
 
 void StudentManager::printAllStudentsInfo()
 {
+    std::cout << "\nAll Students Information:\n";
     printAllStudentsInfoRecursive(this->root);
 }
 

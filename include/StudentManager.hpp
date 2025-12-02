@@ -37,6 +37,7 @@ public:
     // add student to BST by generating unique ID
     void addStudent(std::string name, int age);
 
+    // delete student by ID
     void deleteStudentById(int id);
 
     Student searchById(int id);
