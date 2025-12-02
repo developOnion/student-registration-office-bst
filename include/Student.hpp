@@ -13,7 +13,7 @@ private:
 public:
     // constructor
     Student() {};
-    Student(std::string name, int age);
+    Student(int id, std::string name, int age);
 
     // deconstructor
     ~Student();
