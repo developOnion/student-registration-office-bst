@@ -5,8 +5,19 @@ StudentManager::StudentManager()
     this->root = nullptr;
 }
 
+void StudentManager::freeTreeRecursive(Node *node)
+{
+    if (node == nullptr)
+        return;
+
+    freeTreeRecursive(node->left);
+    freeTreeRecursive(node->right);
+    delete node;
+}
+
 StudentManager::~StudentManager()
 {
+    freeTreeRecursive(this->root);
 }
 
 StudentManager::Node *StudentManager::addStudentRecursive(Node *node, Student newStudent)

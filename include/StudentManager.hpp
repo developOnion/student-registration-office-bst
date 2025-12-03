@@ -30,10 +30,13 @@ private:
 
     // check if ID exists
     bool isIDExist(Node *node, int id);
+    void freeTreeRecursive(Node *node);
 
 public:
+    // constructor
     StudentManager();
 
+    // deconstructor
     ~StudentManager();
 
     // add student to BST by generating unique ID
