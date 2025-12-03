@@ -27,6 +27,7 @@ private:
 
     void printAllStudentsInfoRecursive(Node *node); // inorder traversal
     int countAllStudentsRecursive(Node *node);
+    Node *searchByIdRecursive(Node *node, int id);
 
     // check if ID exists
     bool isIDExist(Node *node, int id);

@@ -125,9 +125,27 @@ void StudentManager::deleteStudentById(int id)
     this->root = deleteStudentByIdRecursive(this->root, id);
 }
 
+StudentManager::Node *StudentManager::searchByIdRecursive(Node *node, int id)
+{
+    if (node == nullptr)
+        return nullptr;
+
+    if (node->data.getId() == id)
+        return node;
+
+    if (node->data.getId() > id)
+        return searchByIdRecursive(node->left, id);
+    else
+        return searchByIdRecursive(node->right, id);
+}
+
 Student StudentManager::searchById(int id)
 {
-    return Student();
+    Node *resultNode = searchByIdRecursive(this->root, id);
+    if (resultNode != nullptr)
+        return resultNode->data;
+    else
+        return Student();
 }
 
 Student StudentManager::searchByName(std::string name)
